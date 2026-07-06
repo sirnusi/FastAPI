@@ -1,8 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:olajide@localhost/TodoApplicationDatabase"
+SQLALCHEMY_DATABASE_URL = 'sqlite:///./todosapp.db'
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 sessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
